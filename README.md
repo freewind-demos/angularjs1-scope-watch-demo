@@ -1,28 +1,12 @@
-AngularJS1 Controller Demo
+AngularJS1 Scope "$watch" Demo
 ===========================
 
-Define a controller in [AngularJS1](https://angularjs.org/).
+可以使用`$scope`的`$watch`来监听某些值的改变。
+
+注意：watch的值发生变化时，angular是通过引用来判断其是否改变，所以如果返回的是数组或者object，就算内容完全相同，也会视为不同的对象。
+此时应该将`$watch`的第三个参数设为`true`
 
 ```
 npm install
-open index.html
+npm run demo
 ```
-
-The traps in the code
----------------------
-
-### `angular.module('app', [])`
-
-`angular.module('app', [])` is to define a module, and `angular.module('app')` is to get a module.
-The only difference is the second argument, but the behavior is completely different!
-
-Why not give a better method name to guid user, rather than give error message in console like:
-
-> angular.js:138 Uncaught Error: [$injector:modulerr] Failed to instantiate module app due to:
-> Error: [$injector:nomod] Module 'app' is not available! You either misspelled the module name or forgot to load it. If registering a module ensure that you specify the dependencies as the second argument.
-
-### `ng-app="app"`
-
-The value `app` here should be equal to the one in `angular.module('app', [])`. Don't forget
-
-![demo](./images/demo.jpg)
