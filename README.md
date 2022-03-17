@@ -8,5 +8,5 @@ AngularJS1 Scope "$watch" Demo
 
 ```
 npm install
-npm run demo
+npm start
 ```
